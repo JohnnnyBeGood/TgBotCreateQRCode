@@ -109,6 +109,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+bot_qrcode/
+.vscode/
+.handler-saves/
+config.py
 
 # Spyder project settings
 .spyderproject
