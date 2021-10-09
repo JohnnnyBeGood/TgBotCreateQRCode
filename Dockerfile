@@ -14,7 +14,7 @@ WORKDIR /home
 COPY requirements.txt *.py ./
 RUN pip install -r requirements.txt
 
-# #COPY *.doc ./
+COPY *.py ./
 RUN rm -rf /var/cache/apk/*
 
 ENTRYPOINT ["python", "main.py"]
