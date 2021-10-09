@@ -26,7 +26,7 @@ vCard_dict = {
 # /WiFi - кодирование точки доступа WI-Fi
 # /site - кодирование интернет адреса
 
-
+# обработка команд: start и help
 @bot.message_handler(commands=["help", "start"])
 def send_welcome(message):
     bot.send_message(message.chat.id, msg_welcome)
@@ -52,8 +52,6 @@ def process_smpltext_step(message):
         img = open(file_name, "rb")
         bot.send_photo(message.chat.id, img, caption="Простой текст")
         os.remove(file_name)
-
-
 # конец блока SimpleText
 
 # блок обработки команды geo
@@ -71,8 +69,6 @@ def process_geo_step(message):
     img = open(file_name, "rb")
     bot.send_photo(message.chat.id, img, caption="Географические координаты")
     os.remove(file_name)
-
-
 # конец блока
 
 # блок обработки команды vCard
@@ -117,9 +113,8 @@ def process_vCard_step_5(message):
     img = open(file_name, "rb")
     bot.send_photo(message.chat.id, img, caption="Контакт")
     os.remove(file_name)
-
-
 # конец блока vCard
+
 
 # блок обработки команды WiFi
 @bot.message_handler(commands=["WiFi"])
@@ -150,8 +145,6 @@ def process_wifi_step_3(message):
     img = open(file_name, "rb")
     bot.send_photo(message.chat.id, img, caption="Точка доступа Wi-Fi")
     os.remove(file_name)
-
-
 # конец блока WiFi
 
 # блок обработки команды site
@@ -168,8 +161,6 @@ def process_website_step(message):
     img = open(file_name, "rb")
     bot.send_photo(message.chat.id, img, caption="ссылка на сайт")
     os.remove(file_name)
-
-
 # конец блока site
 
 # блок обработки случайного текста и выдача ошибки

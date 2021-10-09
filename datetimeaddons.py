@@ -6,5 +6,5 @@ def get_datetime():
     d = today.strftime("%b-%d-%Y")
     time_now = datetime.now()
     t = time_now.strftime("%H_%M_%S")
-    dt_tm_addons = '_' + d + '_' + t
+    dt_tm_addons = d + '_' + t
     return dt_tm_addons
