@@ -7,7 +7,7 @@ import middleware
 
 
 #API_TOKEN = TOKEN
-API_TOKEN = os.environ("TG_TOKEN")
+API_TOKEN = os.environ["TG_TOKEN"]
 bot = telebot.TeleBot(API_TOKEN)
 
 # словарь для хранения данных о точке доступа
