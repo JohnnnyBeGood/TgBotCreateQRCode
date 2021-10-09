@@ -1,12 +1,13 @@
 import os
 import sys
-from config import TOKEN
+#from config import TOKEN
 import telebot
 from message import msg_error, msg_welcome
 import middleware
 
 
-API_TOKEN = TOKEN
+#API_TOKEN = TOKEN
+API_TOKEN = os.environ("TG_TOKEN")
 bot = telebot.TeleBot(API_TOKEN)
 
 # словарь для хранения данных о точке доступа
